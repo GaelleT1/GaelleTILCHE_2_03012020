@@ -1,23 +1,93 @@
+@media screen and (min-width )
+
 *
 {
-    margin: 0px;
-    padding:0px;
-    @font-face {
-        font-family: raleway;
-        src: url(../fonts/raleway/Raleway-VariableFont_wght.ttf);
+    box-sizing: border-box;
 }
 
-.image_box
+body
 {
-    margin: 0 auto;
+    margin:0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
-.side
+.conteneur
 {
-    background: #f2f2f2;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f2f2f2;
+    margin:0 auto;
+    justify-content:center,space-around;
+}
+
+#logo
+{
+    max-width: 30%;
+    padding-top: 0;
+}
+
+nav ul li
+{
+list-style: none;
+padding-top:20px ;
+display: inline-block;
+display flex:space-between ;
+}
+
+ul
+{
+    list-style: none;
+}
+.intro 
+{
+    padding padding-top: 10px;
+    margin: 20px auto 20px auto;
+}
+
+.filtres img
+{
+size: 2px;
+background-color: #deebff;
+color: #0065fc;
+}
+
+ .activites figcaption
+ {
+     text-decoration: black;
+     font-weight:bolder;
+     font-size: 1.5em;
+ }
+   
+
+figure 
+{ 
+    width: 70%;
+    height: 300px;
+    margin: 40px; 
+    padding:2px;
+    border: black solid 3px;
+    border-radius: 15%;
+     
+}
+
+figure img
+{
+    width: 100%;
+    max-height: 60%;
+    display: block;
 }
 
 footer
 {
     background: #f2f2f2;
+}
+footer h2
+{
+margin:40px;
+padding:10px
+list-style: none;
+font-weight: bolder;
+color: black;
 }
