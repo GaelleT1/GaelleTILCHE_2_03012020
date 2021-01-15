@@ -1,5 +1,3 @@
-@media screen and (min-width )
-
 *
 {
     box-sizing: border-box;
@@ -32,18 +30,31 @@ nav ul li
 {
 list-style: none;
 padding-top:20px ;
-display: inline-block;
 display flex:space-between ;
 }
 
-ul
+a
 {
     list-style: none;
+    text-decoration: none;
+    color: black;
 }
+
 .intro 
 {
     padding padding-top: 10px;
     margin: 20px auto 20px auto;
+}
+
+.box_side
+{
+    display: flex;
+
+}
+
+.side img
+{
+width: 40%;
 }
 
 .filtres img
@@ -55,7 +66,7 @@ color: #0065fc;
 
  .activites figcaption
  {
-     text-decoration: black;
+     text-decoration:black;
      font-weight:bolder;
      font-size: 1.5em;
  }
@@ -66,8 +77,8 @@ figure
     width: 70%;
     height: 300px;
     margin: 40px; 
-    padding:2px;
-    border: black solid 3px;
+    padding:4px;
+    border:white solid 4px;
     border-radius: 15%;
      
 }
@@ -77,17 +88,34 @@ figure img
     width: 100%;
     max-height: 60%;
     display: block;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 footer
 {
     background: #f2f2f2;
+    
 }
 footer h2
 {
 margin:40px;
 padding:10px
-list-style: none;
+list-style:none
 font-weight: bolder;
 color: black;
+}
+
+
+
+@media screen and (min-width 1200px)
+{
+
+main
+{
+    min-width: 1180px;
+
+}
+
+
 }
