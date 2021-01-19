@@ -12,12 +12,12 @@ body
 
 .conteneur
 {
-    display:flex;
+     display:flex;
     flex-direction: column;
     width: 100%;
+    min-height: 100vh;
     background-color: #f2f2f2;
-    margin:0 auto;
-    
+    margin:0 auto;    
 }
 
 #logo
@@ -26,10 +26,13 @@ body
     padding-top: 0;
 }
 
- nav ul li
+.titre
 {
-list-style: none;
-
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ margin:  20px auto 10px auto;
+ padding: 10px auto 10px auto; 
 }
 
 a
@@ -41,19 +44,8 @@ a
 
 .intro 
 {
-    padding padding-top: 10px;
+    padding-top: 10px;
     margin: 20px auto 20px auto;
-}
-
-.box_side
-{
-    display: flex;
-
-}
-
-.side img
-{
-width: 40%;
 }
 
 .filtres img
@@ -78,7 +70,7 @@ figure
     margin: 40px; 
     padding:4px;
     border:white solid 4px;
-    border-radius: 15px;
+    border-radius:20px;
     background: white;
      
 }
@@ -90,17 +82,35 @@ figure img
     display: block;
     object-fit: cover;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius : 20px 20px 0px 0px;
+    
 }
 .stars
 {
     size: 2px;
-    color:#0065fc
+    color:#0065fc;
 }
 #empty
 {
-color:#f2f2f2
+color:#f2f2f2;
 }
+#icon_fleche
+{
+size: 2px;
+}
+#icon
+{
+ color:#0065fc;  
+ size:2px;
+ border-radius: 50px; 
+}
+.icon_bloc
+{
+display: flex;
+border: solid #f2f2f2 2px;
+border-radius: 20px;
+}
+
 footer
 {
     background: #f2f2f2;
@@ -130,7 +140,7 @@ color: black;
 header
 {
    position:static
-   padding top:0;
+   padding top 0;
 
 }
 figure
