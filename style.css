@@ -78,7 +78,8 @@ figure
     margin: 40px; 
     padding:4px;
     border:white solid 4px;
-    border-radius: 15%;
+    border-radius: 15px;
+    background: white;
      
 }
 
@@ -89,8 +90,17 @@ figure img
     display: block;
     object-fit: cover;
     overflow: hidden;
+    border-radius: 15px;
 }
-
+.stars
+{
+    size: 2px;
+    color:#0065fc
+}
+#empty
+{
+color:#f2f2f2
+}
 footer
 {
     background: #f2f2f2;
