@@ -91,8 +91,8 @@ flex-direction:row-reverse;
 .section2
 {
 display:grid;
-grid-template-columns: 2fr,1fr,2fr,1fr;
-grid-template-rows: ;
+grid grid-template-columns: auto auto auto auto;
+
 }
 
 .cards_H
@@ -217,7 +217,7 @@ margin:40px;
 padding:10px;
 color: black;
 display: grid;
-grid-template-columns: 200px 200px 200px;
+grid-template-columns: auto auto auto;
 
 }
 
