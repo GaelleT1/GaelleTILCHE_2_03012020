@@ -1,23 +1,41 @@
 *
 {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body
 {
-    margin:0;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
+font-family: 'Raleway', sans-serif;
 }
 
 .conteneur
 {
-     display:flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    background-color: #f2f2f2;
-    margin:0 auto;    
+height: 100vh;
+width: 100vw;
+}
+
+.entete_1
+{
+ display:inline;  
+ 
+}
+
+nav div
+{
+display:inline;
+}
+
+.menu1 .menu3
+{
+color:#0065fc
+}
+
+hr
+{ 
+ color:#0065fc;
+  
 }
 
 #logo
@@ -26,42 +44,83 @@ body
     padding-top: 0;
 }
 
-.titre
+.searchbar
 {
- display: flex;
- align-items: center;
- justify-content: space-around;
- margin:  20px auto 10px auto;
- padding: 10px auto 10px auto; 
+margin:25px;
+padding-top: 15px;
 }
 
-a
+.filtres
 {
-    list-style: none;
-    text-decoration: none;
-    color: black;
+margin: 25px;
+padding-top: 25px;    
 }
 
-.intro 
+
+h1
 {
-    padding-top: 10px;
-    margin: 20px auto 20px auto;
+font-size: 1.2rem;
+padding-top: 20px;
+padding-bottom: 10px;
 }
 
-.filtres img
+hr
 {
-size: 2px;
-background-color: #deebff;
 color: #0065fc;
+width: 200px;
+size: 70px;
 }
 
- .activites figcaption
- {
-     text-decoration:black;
-     font-weight:bolder;
-     font-size: 1.5em;
- }
-   
+.entete_3 div
+{
+display: inline;
+}
+
+
+.section1
+{
+padding-top: 15px;
+margin margin-top:15px;
+margin bottom:15px;
+width:100vw;
+display:flex ;
+justify-content: flex-start;
+flex-direction:row-reverse;
+}
+
+.section2
+{
+display:grid;
+grid-template-columns: 2fr,1fr,2fr,1fr;
+grid-template-rows: ;
+}
+
+.cards_H
+{
+max-width: 70%; 
+height:auto 
+border: black solid 3px;
+display: grid;
+grid-template-columns: auto auto auto ;
+grid-template-rows: auto auto ;
+column-gap:auto ;
+row-gap: auto;
+align-content: space;
+}
+
+.cards_H figure
+{
+height: 20vh;
+width: 20vw;
+}
+
+aside
+{
+max-width: 30%;
+display: flex;
+background-color: #f2f2f2;
+}
+
 
 figure 
 { 
@@ -71,8 +130,7 @@ figure
     padding:4px;
     border:white solid 4px;
     border-radius:20px;
-    background: white;
-     
+    background: white;    
 }
 
 figure img
@@ -82,9 +140,9 @@ figure img
     display: block;
     object-fit: cover;
     overflow: hidden;
-    border-radius : 20px 20px 0px 0px;
-    
+    border-radius : 20px 20px 0px 0px;   
 }
+
 .stars
 {
     size: 2px;
@@ -104,54 +162,145 @@ size: 2px;
  size:2px;
  border-radius: 50px; 
 }
-.icon_bloc
+
+#boutons
 {
 display: flex;
 border: solid #f2f2f2 2px;
 border-radius: 20px;
 }
 
-footer
+
+.searchbar button
 {
-    background: #f2f2f2;
-    
+size:3px;
+background-color:#f2f2f2;
+color:black;
 }
-footer h2
+
+a
 {
+text-decoration: none;
+color:black;
+}
+    
+
+
+.titre_principal 
+{
+    padding-top: 10px;
+    margin: 20px auto 20px auto;
+}
+
+.filtres i
+{
+size: 2px;
+background-color: #deebff;
+color: #0065fc;
+}
+
+ .activites figcaption
+ {
+     text-decoration:black;
+     font-weight:bolder;
+     font-size: 1.5em;
+ }
+
+footer ul li
+{
+list-style-type:none;
+}
+footer 
+{
+background: #f2f2f2;
 margin:40px;
 padding:10px;
-list-style:none;
-font-weight: bolder;
 color: black;
+display: grid;
+grid-template-columns: 200px 200px 200px;
+
 }
 
 
-
-@media screen and (min-width 992px)
+@media screen and (max-width: 575.98px);
 {
 
 .conteneur
 {
-    min-width: 700px;
-    margin:0 auto;
-    display:flex;
+display:flex;
+flex-direction: column;
+width: 100%;
+min-height: 100vh;
+margin:0 auto;    
+ }
 
-}
 header
 {
    position:static
    padding top 0;
+}
+
+
+.intro 
+{
+    padding padding-top: 10px;
+    margin: 20px auto 20px auto;
+}
+
+.box_side
+{
+    display: flex;
+    flex-direction:column;
+
 
 }
-figure
+
+aside img
 {
-min-width:60% ;
-max-width:1000 ;
+width: 40%;
 }
-footer
+
+.filtres img
 {
-display:flex;
-flex-direction: column;
+size: 2px;
+ color: #0065fc;
+}
+ .activites figcaption
+ {
+     text-decoration: black;
+     text-decoration:black;
+     font-weight:bolder;
+     font-size: 1.5em;
+ }
+    
+ figure
+    {
+    width: 70%;
+    height: 300px;
+    margin: 40px; 
+    padding:2px;
+    border: black solid 3px;
+    padding:4px;
+    border:white solid 4px;
+    border-radius: 15%;
+
+}
+ figure img
+ {
+    width: 100%;
+    max-height: 60%;
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+footer h2
+{
+margin:40px;
+padding:10px;
+font-weight: bolder;
+color: black;
+background: #f2f2f2;
 }
 
 }
