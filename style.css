@@ -10,33 +10,57 @@ body
 font-family: 'Raleway', sans-serif;
 }
 
+
 .conteneur
 {
 height: 100vh;
 width: 100vw;
+display:grid;
+grid-template-columns:repeat(4, 1fr) ;
+grid-template-rows: 1fr,4fr,1fr ;
+grid-template-areas: 
+"header header header header"
+"main main main main"
+"footer footer footer footer"
+;
 }
 
-.entete_1
+header
 {
- display:inline;  
- 
+grid-area: "header";
 }
 
-nav div
+main
 {
-display:inline;
+grid-area: "main";
+display:grid;
+grid-template-columns: repeat (4.1fr)fr ;
+grid-template-rows:repeat (4,1fr) ;
+grid-template-areas:
+"hebergement hebergement hebergement hebergement"
+"hebergement hebergement hebergement hebergement"
+"activites activites activites activites"
+"activites activites activites activites"
+;
 }
 
-.menu1 .menu3
+.hebergements
 {
-color:#0065fc
+grid-area: "hebergement";
 }
 
-hr
-{ 
- color:#0065fc;
+.activites
+{
+grid-area: "activites";
+}
+
+
+footer
+{
+ grid-area: "footer";   
+}
   
-}
+
 
 #logo
 {
@@ -50,11 +74,6 @@ margin:25px;
 padding-top: 15px;
 }
 
-.filtres
-{
-margin: 25px;
-padding-top: 25px;    
-}
 
 
 h1
@@ -63,64 +82,6 @@ font-size: 1.2rem;
 padding-top: 20px;
 padding-bottom: 10px;
 }
-
-hr
-{
-color: #0065fc;
-width: 200px;
-size: 70px;
-}
-
-.entete_3 div
-{
-display: inline;
-}
-
-
-.section1
-{
-padding-top: 15px;
-margin margin-top:15px;
-margin bottom:15px;
-width:100vw;
-display:flex ;
-justify-content: flex-start;
-flex-direction:row-reverse;
-}
-
-.section2
-{
-display:grid;
-grid grid-template-columns: auto auto auto auto;
-
-}
-
-.cards_H
-{
-max-width: 70%; 
-height:auto 
-border: black solid 3px;
-display: grid;
-grid-template-columns: auto auto auto ;
-grid-template-rows: auto auto ;
-column-gap:auto ;
-row-gap: auto;
-align-content: space;
-}
-
-.cards_H figure
-{
-height: 20vh;
-width: 20vw;
-}
-
-aside
-{
-max-width: 30%;
-display: flex;
-background-color: #f2f2f2;
-}
-
 
 figure 
 { 
@@ -148,14 +109,17 @@ figure img
     size: 2px;
     color:#0065fc;
 }
+
 #empty
 {
 color:#f2f2f2;
 }
+
 #icon_fleche
 {
 size: 2px;
 }
+
 #icon
 {
  color:#0065fc;  
@@ -229,6 +193,321 @@ grid-template-columns: auto auto auto;
 {
 display:flex;
 flex-direction: column;
+width: 100%;
+min-height: 100vh;
+margin:0 auto;    
+ }
+
+header
+{
+   position:static
+   padding top 0;
+}
+
+
+.intro 
+{
+    padding padding-top: 10px;
+    margin: 20px auto 20px auto;
+}
+
+.box_side
+{
+    display: flex;
+    flex-direction:column;
+
+
+}
+
+aside img
+{
+width: 40%;
+}
+
+.filtres img
+{
+size: 2px;
+ color: #0065fc;
+}
+ .activites figcaption
+ {
+     text-decoration: black;
+     text-decoration:black;
+     font-weight:bolder;
+     font-size: 1.5em;
+ }
+    
+ figure
+    {
+    width: 70%;
+    height: 300px;
+    margin: 40px; 
+    padding:2px;
+    border: black solid 3px;
+    padding:4px;
+    border:white solid 4px;
+    border-radius: 15%;
+
+}
+ figure img
+ {
+    width: 100%;
+    max-height: 60%;
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+footer h2
+{
+margin:40px;
+padding:10px;
+font-weight: bolder;
+color: black;
+background: #f2f2f2;
+}
+
+}.conteneur
+{
+height: 100vh;
+width: 100vw;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 2fr 2fr 1fr;
+grid-template-areas:  
+}
+
+.hebergements
+{
+grid-area:"hebergements";
+display:grid; 
+grid-template-columns:3fr 2fr;
+grid-template-rows: 1fr ;
+grid-template-areas: "hotels" "populaire";
+}
+
+.populaire
+{
+grid-area: "populaire";
+grid-template-columns:1px 1fr 10px ;
+grid-template-rows: 0.5fr 1fr 1fr 1fr ;
+
+}
+
+
+
+.hotels
+{
+grid-area: "hotels";
+}
+
+nav div
+{
+display:inline;
+}
+
+.menu1 .menu3
+{
+color:#0065fc
+}
+
+
+#logo
+{
+    max-width: 30%;
+    padding-top: 0;
+}
+
+.searchbar
+{
+margin:25px;
+padding-top: 15px;
+}
+
+.filtres
+{
+margin: 25px;
+padding-top: 25px;    
+}
+
+
+h1
+{
+font-size: 1.2rem;
+padding-top: 20px;
+padding-bottom: 10px;
+}
+
+hr
+{
+color: #0065fc;
+width: 200px;
+size: 70px;
+}
+
+.entete_3 div
+{
+display: inline;
+}
+
+
+.hotels
+{
+max-width: 70%; 
+height:auto 
+border: black solid 3px;
+display: grid;
+grid-template-columns: auto auto auto ;
+grid-template-rows: auto auto ;
+column-gap:auto ;
+row-gap: auto;
+align-content: space;
+}
+
+.activites
+{
+grid-area: "activites";
+display:grid;
+grid-template-columns:1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+grid-template-areas: "image_box1 image_box2 image_box4 image_box5" 
+                    "image_box1 image_box3 image_box4 image_box6"
+
+}
+
+.image_box1
+{
+grid-area: "image_box1";
+}
+.image_box2
+{
+    grid-area:"image_box2" ;
+}
+.image_box3
+{
+    grid-area:"image_box3" ;
+}
+.image_box4
+{
+    grid-area: "image_box4";
+}
+.image_box5
+{
+    grid-area:"image_box5" ;
+}
+.image_box6
+{
+    grid-area:"image_box6" ;
+}
+
+figure 
+{ 
+    width: 70%;
+    height: 300px;
+    margin: 40px; 
+    padding:4px;
+    border:white solid 4px;
+    border-radius:20px;
+    background: white;    
+}
+
+figure img
+{
+    width: 100%;
+    max-height: 60%;
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius : 20px 20px 0px 0px;   
+}
+
+.stars
+{
+    size: 2px;
+    color:#0065fc;
+}
+
+.empty
+{
+    color:#f2f2f2;
+}
+
+#icon_fleche
+{
+size: 2px;
+}
+
+.icon
+{
+ color:#0065fc;  
+ size:2px;
+ border-radius: 50px; 
+}
+
+.boutons
+{
+display: flex;
+border: solid #f2f2f2 2px;
+border-radius: 20px;
+}
+
+
+.searchbar button
+{
+size:3px;
+background-color:#f2f2f2;
+color:black;
+}
+
+a
+{
+text-decoration: none;
+color:black;
+}
+    
+
+
+.titre_principal 
+{
+    padding-top: 10px;
+    margin: 20px auto 20px auto;
+}
+
+.filtres i
+{
+size: 2px;
+background-color: #deebff;
+color: #0065fc;
+}
+
+ .activites figcaption
+ {
+     text-decoration:black;
+     font-weight:bolder;
+     font-size: 1.5em;
+ }
+
+footer ul li
+{
+list-style-type:none;
+}
+footer 
+{
+background: #f2f2f2;
+padding:10px;
+color: black;
+display: grid;
+grid-template-columns: auto auto auto;
+column-gap: auto;
+}
+
+
+@media screen and (max-width: 575.98px);
+{
+
+.conteneur
+{
+
 width: 100%;
 min-height: 100vh;
 margin:0 auto;    
