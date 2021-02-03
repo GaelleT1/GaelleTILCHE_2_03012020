@@ -1,0 +1,277 @@
+*
+{
+    box-sizing: border-box;
+}
+html{font-size:62.5%}
+
+body
+{
+font-family: 'Raleway', sans-serif;
+font-size: 1.6rem;
+line-height: 1.8;
+margin:0;
+
+}
+:root {
+  --soft-gray: #f2f2f2;
+  --blue: #0065FC;
+  --soft-blue: #DEEBFF;
+}
+img{max-width: 100%}
+
+ul{padding: 0; list-style: none}
+button{cursor:pointer;}
+.container
+{
+max-width: 1440px;
+margin:0 auto;
+}
+label{position: absolute;left:-999px;}
+
+/*Header*/
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+header nav ul li:nth-child(2) {
+    border-top:1px solid #000;
+}
+header nav ul li a {
+    padding: 20px 0 0;
+    display: block;
+}
+header nav ul li:first-child {flex-basis: 70%;}
+header nav img { max-width: 15.0rem;}
+
+input{border:0;    background: transparent;}
+::placeholder{color:#000;font-size: 1.6rem;font-weight: 700}
+header form {
+    background: var(--soft-gray);
+    border-radius: 20px;
+    padding: 1rem 3.3rem;
+    max-width: 35.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.entete_3{
+    display: flex;
+
+    align-items: center;
+}
+.entete_3 h2{padding: 0}
+.entete_3 i {
+    height: 37px;
+    background: var(--soft-blue);
+    padding: 10px;
+    border-radius: 50%;
+    width: 37px;
+    text-align: center;
+}
+.entete_3 .bouton:first-child i {
+  /*font-size:X*/
+}
+.entete_3 .bouton:nth-child(2) i{
+  /*font-size:X*/
+}
+.entete_3 .bouton:last-child i{
+  /*font-size:X*/
+
+}
+.entete_3 .bouton{
+ margin-left:50px;
+
+}
+.text i {
+    margin-right: 10px;
+    color: var(--blue);
+    border: 1px solid var(--soft-blue);
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.entete_3  .cta{flex-basis: 100%}
+
+/*-----------MAIN--------------*/
+
+#hebergements{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/**--- .hotels ----*/
+.hotels {
+    display: flex;
+    flex-wrap: wrap;
+    background: red;
+    padding: 20px;
+}
+.hotels h2 {
+    flex-basis: 100%;
+}
+.hotels .box_side {
+    flex: 1;
+    flex-basis: 33.33%;
+    border: 1px solid #000;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+}
+.hotels .box_side figure
+{ 
+ margin: 0;
+
+  }
+.hotels .box_side img
+{ 
+
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+  }
+.hotels .box_side {
+    flex: 1;
+    flex-basis: 33.33%;
+}
+.hotels .box_side p,.hotels .box_side h3 {
+    margin:0;
+}
+/*.hotels .box_side:nth-of-type(3n+3) {
+   margin-left:30px;
+}*/
+
+
+
+
+.cards
+{
+max-width: 1200px;
+width: 80%;
+height: auto;
+margin: 20px auto;
+background:#f2f2f2;
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 2fr 2fr;
+grid-gap: 5px;
+justify-content: center;
+}
+
+.hebergements
+{
+display:grid;
+
+}
+
+h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+
+
+figure img
+{
+width: 100%;
+height: 20%;
+display: block;
+object-fit: cover;
+overflow: hidden;
+border-radius : 20px 20px 0px 0px;   
+}
+
+.stars
+{
+    size: 2px;
+    color:#0065fc;
+}
+
+.star-empty
+{
+color:#f2f2f2;
+}
+
+#icon_fleche
+{
+size: 2px;
+}
+
+#icon
+{
+ color:#0065fc;  
+ size:2px;
+ border-radius: 50px; 
+}
+
+#boutons
+{
+display: flex;
+border: solid #f2f2f2 2px;
+border-radius: 20px;
+}
+
+
+
+.searchbar button {
+    color: white;
+    border: 0;
+    background: var(--blue);
+    border-radius: 0 20px 20px 0;
+    padding: 0 20px;
+    margin: -10px -30px -10px 0px;
+}
+
+a
+{
+text-decoration: none;
+color:black;
+}
+    
+
+.titre_principal,.titre_principal p, .titre_principal h1 {
+    margin: 0;
+}
+
+.filtres i
+{
+size: 2px;
+background-color: #deebff;
+color: #0065fc;
+}
+
+ .activites figcaption
+ {
+     text-decoration:black;
+     font-weight:bolder;
+     font-size: 1.5em;
+ }
+footer h3
+{
+padding-bottom: 10px;
+
+}
+
+footer ul li
+{
+list-style-type:none;
+padding: 5px;
+}
+
+footer 
+{
+height: 150px;
+width: 100%;
+background: #f2f2f2;
+padding:10px;
+color: black;
+display: grid;
+grid-template-columns: auto auto auto;
+grid-gap: 10px;
+}
+
+
+
