@@ -36,40 +36,23 @@ ul
 button
 {
     cursor:pointer;
+}
 
+a
+{
+text-decoration: none;
+color:black;
 }
 
 .container
 {
-max-width: 1440px;
+
 margin:0 auto;
 }
 
-label
-{
-    position: absolute;left:-999px;
-}
+
 
 /*Header*/
-header nav ul 
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-}
-
-header nav ul li :nth-child(2) 
-{
-    border-top: 2rem;
-    color: black;
-}
-
-header nav ul li a
-{
-    padding: 20px 0 0;
-    display: block;
-}
 
 header nav ul li:first-child
 {
@@ -81,15 +64,49 @@ header nav img
     max-width: 15.0rem;
 }
 
+header nav ul 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+header nav ul li :nth-child(2) 
+{
+    
+    border-top: solid 3px var(--blue);
+    color: var(--blue);
+}
+header nav ul li a:nth-child(4)
+{
+    color:var(--blue);
+}
+   
+header nav ul li a
+{
+    padding: 20px 0 0;
+    display: block;
+}
+
 h1 
 {
-    font-size: 1.9rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
 .titre_principal,.titre_principal p, .titre_principal h1 
 {
     margin: 0;
+}
+.titre_principal p:nth-child(2)
+{
+font-size:2rem;
+}
+
+.text
+{
+margin-bottom:  2rem;
 }
 
 header form 
@@ -100,7 +117,11 @@ header form
     max-width: 35.1rem;
     display: flex;
     justify-content: space-between;
+    margin-top: 3rem ;
+    margin-bottom: 2rem;
 }
+
+
 .searchbar button 
 {
     color: white;
@@ -115,7 +136,10 @@ input
 {
     border:0;    background: transparent;
 }
-
+label
+{
+    position: absolute;left:-999px;
+}
 ::placeholder
 {   
     color:#000;
@@ -128,6 +152,7 @@ input
 {
     display: flex;
     align-items: center;
+    margin-top:20px;
 }
 
 .filtres h2
@@ -143,6 +168,7 @@ input
     border-radius: 50%;
     width: 37px;
     text-align: center;
+    color: var(--blue);
 }
 
 .filtres .bouton
@@ -154,7 +180,10 @@ border: solid  2px var(--soft-gray);
  padding: 2px 20px 2px 2px;
 }
 
-
+.filtres .bouton :hover
+{
+background-color: #DEEBFF;
+}
 
 
 .text i 
@@ -175,19 +204,21 @@ border: solid  2px var(--soft-gray);
 {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
 }
+
 
 /**--- .hotels ----*/
 .hotels 
 {
-    width: 70%;
+    width: 68%;
     display: flex;
     flex-wrap: wrap;
     background: var(--soft-gray);
     padding: 10px;
     border-radius: 20px;
-    height: 200vh;
+    height: 185vh;
+
 }
 
 .hotels h2 
@@ -234,93 +265,6 @@ border: solid  2px var(--soft-gray);
     margin:0;
 }
 
-/*.hotels .box_side:nth-of-type(3n+3) {
-   margin-left:30px;
-}*/
-
-/**--- .populaire ----*/
-.populaire h2
-{
-flex-basis: 100%;
-
-}
-.populaire h2 i
-{
-padding-left: 100px;
-}
-
-.populaire
-{
-display: flex;
-flex-direction: column;
-height:200vh;
-width:30%;
-background:var(--soft-gray);
-overflow: hidden;
-}
-
-.populaire figure
-{
-    display:flex;
-    background:white;
-    border: var(--soft-gray) 2px;
-    border-radius: 20px 0 0 20px;
-    margin:0;
-    width: 100%;
-    padding: 5px;
-    object-fit: cover;  
-}
-
-.populaire figcaption
-{
-padding-left: 50px;
-}
-
-.populaire figure img
-{
-max-width: 30%;
-border-radius : 20px 0px 0px 20px;
-background: green;   
-}
-
-/**--- #activites ----*/
-#activites h2
-{
-flex-basis:100%;
-}
-
-#activites
-{
-display: flex;
-flex-wrap: wrap;
-
-}
-
-#activites .image_box 
-{
-    
-    width: 300px;
-    border:2px solid var(--soft-gray);
-    border-radius: 20%;
-}
-
-#activites .image_box .img1 .img4
-{
-width: 100%;
-height:80%;
-object-fit: cover;
-
-}
-
-#activites figure .img1 
-{
-
-height: 400px;
-width: 300px;
-
-}
-
-
 .stars
 {
     size: 2px;
@@ -331,19 +275,110 @@ width: 300px;
 {
 color:#f2f2f2;
 }
+/**--- .populaire ----*/
 
 
 
 
 
-
-
-
-a
+.populaire h2 i
 {
-text-decoration: none;
-color:black;
+padding-left: 100px;
 }
+
+.populaire
+{
+display: flex;
+flex-direction: column;
+height:185vh;
+width:30%;
+background:var(--soft-gray);
+overflow: hidden;
+border-radius: 20px;
+justify-content: space-evenly;
+}
+
+.pouplaire .box_side
+{
+   
+}
+.populaire figure
+{
+    display:flex;
+    background:white;
+    border: var(--soft-gray) 2px;
+    border-radius: 20px 20px 20px 20px;
+    margin:0;
+    width: 95%;
+    padding: 5px;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid var(--soft-gray);
+    box-shadow: 2px 1px 4px 2px grey;  
+}
+
+.populaire figcaption
+{
+padding-left: 15px;
+}
+
+.populaire figure img
+{
+max-width: 30%;
+border-radius : 20px 0px 0px 20px;
+   
+}
+
+/**--- #activites ----*/
+
+
+
+#activites
+{
+display: flex;
+flex-wrap: wrap;
+display: flex;
+align-items: center;
+justify-content: space-around;
+background: #f2f2f2;
+
+}
+
+#activites h2
+{
+flex-basis:100%;
+}
+
+#activites .image_box
+{
+width:300px;
+border-radius: 20px 20px 0px 0px;
+object-fit:cover;
+
+}
+
+#activites .img
+{
+object-fit: cover;
+border-radius:20px 20px 0px 0px;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 
