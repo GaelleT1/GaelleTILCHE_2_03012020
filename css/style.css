@@ -72,15 +72,15 @@ header nav ul
     margin-bottom: 2rem;
 }
 
-header nav ul li :nth-child(2) 
+.heb  a:nth-child(1) 
 {
-    
-    border-top: solid 3px var(--blue);
     color: var(--blue);
+    border-top: 3px solid var(--blue);
 }
-header nav ul li a:nth-child(4)
+
+.inscription a:nth-child(1) 
 {
-    color:var(--blue);
+    color: var(--blue);
 }
    
 header nav ul li a
@@ -111,16 +111,22 @@ margin-bottom:  2rem;
 
 header form 
 {
-    background: var(--soft-gray);
+    background: white;
+    border: var(--soft-gray) 2px solid;
     border-radius: 20px;
     padding: 1rem 3.3rem;
-    max-width: 35.1rem;
+    max-width: 34rem;
     display: flex;
     justify-content: space-between;
     margin-top: 3rem ;
     margin-bottom: 2rem;
+
 }
 
+form.searchbar 
+{
+    padding-left: 1.5rem;
+}
 
 .searchbar button 
 {
@@ -129,7 +135,7 @@ header form
     background: var(--blue);
     border-radius: 0 20px 20px 0;
     padding: 0 20px;
-    margin: -10px -30px -10px 0px;
+    margin: -10px -33px -10px 0px;
 }
 
 input
@@ -144,7 +150,8 @@ label
 {   
     color:#000;
     font-size: 1.6rem;
-    font-weight: 700
+    font-weight: 700;
+
 }
 
 
@@ -218,7 +225,6 @@ background-color: #DEEBFF;
     padding: 10px;
     border-radius: 20px;
     height: 185vh;
-
 }
 
 .hotels h2 
@@ -232,8 +238,7 @@ background-color: #DEEBFF;
     flex-basis: 33.33%;
     border-radius: 20px;
     margin-bottom: 20px;
-    padding: 20px;
-    
+    padding: 20px;   
 }
 
 .hotels .box_side figure
@@ -242,7 +247,7 @@ background-color: #DEEBFF;
  padding:5px;
  background:white;
  border-radius: 20px;
- box-shadow: 2px 1px 4px 2px grey;
+ box-shadow: 2px 2px 4px 2px grey;
  }
 
 .hotels .box_side img
@@ -253,12 +258,6 @@ background-color: #DEEBFF;
     border-radius: 20px 20px 0px 0px;
 }
 
-
-.hotels .box_side 
-{
-    flex: 1;
-    flex-basis: 33.33%;
-}
 
 .hotels .box_side p,.hotels .box_side h3 
 {
@@ -275,11 +274,9 @@ background-color: #DEEBFF;
 {
 color:#f2f2f2;
 }
+
+
 /**--- .populaire ----*/
-
-
-
-
 
 .populaire h2 i
 {
@@ -300,21 +297,22 @@ justify-content: space-evenly;
 
 .pouplaire .box_side
 {
-   
+  padding-left: 5px; 
 }
+
 .populaire figure
 {
     display:flex;
     background:white;
     border: var(--soft-gray) 2px;
     border-radius: 20px 20px 20px 20px;
-    margin:0;
+    margin:10px;
     width: 95%;
     padding: 5px;
     height: 180px;
     object-fit: cover;
     border: 2px solid var(--soft-gray);
-    box-shadow: 2px 1px 4px 2px grey;  
+    box-shadow: 2px 2px 4px 2px grey;  
 }
 
 .populaire figcaption
@@ -326,12 +324,9 @@ padding-left: 15px;
 {
 max-width: 30%;
 border-radius : 20px 0px 0px 20px;
-   
-}
+   }
 
 /**--- #activites ----*/
-
-
 
 #activites
 {
@@ -340,8 +335,8 @@ flex-wrap: wrap;
 display: flex;
 align-items: center;
 justify-content: space-around;
-background: #f2f2f2;
-
+margin-left: -50px;
+padding-right: 50px;
 }
 
 #activites h2
@@ -349,48 +344,79 @@ background: #f2f2f2;
 flex-basis:100%;
 }
 
+#activites h3
+{
+padding-left: 15px;
+}
+
 #activites .image_box
 {
-width:300px;
-border-radius: 20px 20px 0px 0px;
-object-fit:cover;
-
+width:280px;
 }
 
-#activites .img
+#activites figure
 {
-object-fit: cover;
-border-radius:20px 20px 0px 0px;
+border: solid 1px var(--soft-gray);
+border-radius: 20px;
+box-shadow: 2px 2px 4px 2px var(--soft-gray);
+padding:0;
+width: 100%;
 }
 
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
- 
-
-footer h3
+#activites figure img
 {
-padding-bottom: 10px;
-
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+    width:100%;
 }
+
+ .fig_1, .fig_4
+{
+height:100vh;
+}
+
+.fig_1 img, .fig_4 img
+{
+height: 80vh;
+}
+
+.fig_2
+{
+height:55vh;
+}
+
+.fig_2 img
+{
+height:40vh;
+}
+
+.fig_3
+{
+height:35vh;
+}
+
+.fig_3 img
+{
+height: 20vh;
+}
+
+.fig_5, .fig_6
+{
+height:45vh;
+}
+
+.fig-5 img:nth-child(1) 
+{
+    height: 30vh;
+}
+
+.fig_6 > img:nth-child(1) 
+{
+    height: 28vh;
+}
+
+
+/**--- Footer ----*/
 
 footer ul li
 {
@@ -405,10 +431,10 @@ width: 100%;
 background: #f2f2f2;
 padding:10px;
 color: black;
-display: grid;
-grid-template-columns: auto auto auto;
-grid-gap: 10px;
-margin-top: 50px;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+margin-top:50px;
 }
 
 
