@@ -447,7 +447,7 @@ padding:10px;
 
 /**----------------------------- Version Mobile -----------------------------------*/
 
-@media screen and (min-width: 576px) 
+@media screen and (max-width: 576px) 
 {
     body
     {
@@ -455,7 +455,22 @@ padding:10px;
     flex-direction:column;
     align-items:center;
     width: 100%;
+    margin:auto
+    }
+
     
+    {
+
+    }
+
+    main
+    {
+        display:flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+
     }
     
     #hebergements
@@ -485,6 +500,13 @@ padding:10px;
     flex-direction:column;
     align-items:center;
     
+    }
+
+    .to_visit
+    {
+display:flex;
+flex-direction: column;
+
     }
 
     footer
