@@ -1,11 +1,11 @@
 *
 {
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 
 html
 {
-    font-size:62.5%
+font-size:62.5%
 }
 
 body
@@ -13,7 +13,9 @@ body
 font-family: 'Raleway', sans-serif;
 font-size: 1.6rem;
 line-height: 1.8;
-margin:0;
+margin-right: 20px;
+margin-left:20px;
+
 }
 
 :root 
@@ -25,17 +27,17 @@ margin:0;
 
 img
 {
-    max-width: 100%
+max-width: 100%
 }
 
 ul
 {
-    padding: 0; list-style: none
+padding: 0; list-style: none
 }
 
 button
 {
-    cursor:pointer;
+cursor:pointer;
 }
 
 a
@@ -44,14 +46,9 @@ text-decoration: none;
 color:black;
 }
 
-.container
-{
-margin: auto;
-}
 
 
-
-/*Header*/
+/*------------------------Header-----------------------------------------*/
 
 header nav ul li:first-child
 {
@@ -119,7 +116,6 @@ header form
     justify-content: space-between;
     margin-top: 3rem ;
     margin-bottom: 2rem;
-
 }
 
 form.searchbar 
@@ -160,11 +156,13 @@ label
     display: flex;
     align-items: center;
     margin-top:20px;
+
 }
 
-.bouton :hover
+.filtres :hover
 {
 color: red;
+background-color: blueviolet;
 }
 
 
@@ -190,13 +188,9 @@ border: solid  2px var(--soft-gray);
  margin-left: 50px;
  background:white;
  border-radius: 20px;
- padding: 2px 20px 2px 2px;
+ padding-right:10px;
 }
 
-.filtres .bouton :hover
-{
-background-color: #DEEBFF;
-}
 
 
 .text i 
@@ -212,6 +206,14 @@ background-color: #DEEBFF;
 
 
 /*-----------MAIN--------------*/
+main
+{
+display:flex;
+flex-wrap: wrap;
+}
+
+
+    
 
 #hebergements
 {
@@ -224,27 +226,39 @@ background-color: #DEEBFF;
 /**--- .hotels ----*/
 .hotels 
 {
-    max-width: 68%;
+    max-width: 65%;
     display: flex;
     flex-wrap: wrap;
     background: var(--soft-gray);
     padding: 10px;
     border-radius: 20px;
-    height: 120vh;
+   
+       
 }
 
 .hotels h2 
 {
-    flex-basis: 100%;
+    padding-left:20px;
+    flex-basis:100%;
 }
+
+
+
+
+
+
+
 
 .hotels .box_side 
 {
-    flex: 1;
-    flex-basis: 33.33%;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    padding: 20px;   
+    
+        flex: 1;
+        flex-basis: 33.33%;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        padding: 20px;   
+    
+ 
 }
 
 .hotels .box_side figure
@@ -259,7 +273,7 @@ background-color: #DEEBFF;
 .hotels .box_side img
 { 
     width: 100%;
-    height: 150px;
+    height:150px;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
 }
@@ -283,24 +297,34 @@ color:#f2f2f2;
 
 
 /**--- .populaire ----*/
-
+.populaire h2
+{
+padding-left: 20px;
+margin-bottom:40px;
+padding-top:10px;
+}
 .populaire h2 i
 {
-padding-left: 100px;
+padding-left: 150px;
 }
 
 .populaire
 {
 display: flex;
 flex-direction: column;
-height:120vh;
-max-width:30%;
+max-width:33%;
 background:var(--soft-gray);
 overflow: hidden;
 border-radius: 20px;
-justify-content: space-evenly;
+justify-content: space-around;
 }
-
+.populaire .cards
+{
+display: flex;
+flex-direction: column;
+align-items:center;
+justify-content: space-between;
+}
 .pouplaire .box_side
 {
   padding-left: 5px; 
@@ -316,7 +340,7 @@ justify-content: space-evenly;
     width: 95%;
     padding: 5px;
     height: 180px;
-    object-fit: cover;
+    object-fit:cover;
     border: 2px solid var(--soft-gray);
     box-shadow: 2px 2px 4px 3px grey;  
 }
@@ -330,97 +354,77 @@ padding-left: 15px;
 {
 max-width: 30%;
 border-radius : 20px 0px 0px 20px;
-   }
+ object-fit:cover 
+ }
 
 /**--- #activites ----*/
 
 #activites
 {
 display: flex;
-flex-wrap: wrap;
-display: flex;
-align-items: center;
-justify-content: space-around;
-margin-left: -50px;
-padding-right: 50px;
+flex-direction: column;
 }
 
 #activites h2
 {
-flex-basis:100%;
-padding-left:60px;
+align-self: flex-start;
+}
+.to_visit
+{
+display:flex;
+justify-content:space-between;
 }
 
 #activites h3
+
 {
-padding-left: 10px;
+padding-left:10px;
 }
 
 #activites .image_box
 {
-width:280px;
+  width:360px;
 }
 
 #activites figure
 {
 border: solid 1px var(--soft-gray);
 border-radius: 20px;
-box-shadow: 2px 2px 4px 3px var(--soft-gray);
+box-shadow: 2px 2px 4px 3px grey;
 padding:0;
-width: 100%;
+
 }
+
 
 #activites figure img
 {
     border-radius: 20px 20px 0px 0px;
     object-fit: cover;
+    height:70%;
     width:100%;
+   
 }
 
  .fig_1, .fig_4
 {
-height:70vh;
+height:100vh;
 }
-
-.fig_1 img, .fig_4 img
-{
-height: 60vh;
-}
-
+ 
 .fig_2
 {
-height:35vh;
+    height:45vh;
 }
 
-.fig_2 img
+.fig_3, .fig_6
 {
-height:25vh;
+    height:40vh
 }
 
-.fig_3
+.fig_5
 {
-height:30vh;
+    height:50vh;
 }
 
-.fig_3 img
-{
-height: 20vh;
-}
-
-.fig_5, .fig_6
-{
-height:35vh;
-}
-
-.fig-5 img:nth-child(1) 
-{
-    height: 25vh;
-}
-
-.fig_6 > img:nth-child(1) 
-{
-    height: 25vh;
-}
 
 
 /**--- Footer ----*/
@@ -434,15 +438,14 @@ padding: 5px;
 footer 
 {
 margin:auto;
-height: 300px;
 width: 100%;
 background: #f2f2f2;
-padding:10px;
 color: black;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
 margin-top:50px;
+padding:10px;
 }
 
 /**------------------- Version Mobile -----------------------------------*/
@@ -488,12 +491,7 @@ align-items:center;
 
 }
 
-#activite .image_box
-{
 
-    width:100%;
-
-}
 .fig_1,.fig_2,.fig_3,.fig_4,.fig_5,.fig_6
 {
 width:100%;
