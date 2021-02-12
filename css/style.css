@@ -457,11 +457,42 @@ padding:10px;
     width: 100%;
     margin:auto
     }
-
     
+    header nav ul
     {
+display:flex;
+flex-direction: row ;
+flex-wrap: wrap;
 
     }
+    
+    header nav ul li:first-child
+{
+     flex-basis: 60%;
+}
+
+header nav ul li :nth-child(2)
+{
+flex-basis:50%;
+}
+
+.heb  a:nth-child(1) 
+{
+    color: var(--blue);
+    border-bottom: 3px solid var(--blue);
+}   
+
+.filtres
+{
+display:flex;
+flex-wrap:wrap;
+
+}
+
+.filtre h2
+{
+    flex-basis:100%;
+}
 
     main
     {
