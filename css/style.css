@@ -703,14 +703,22 @@ align-self: flex-start;
 
 /**----------------------VERSION----- TABLETTE--------------------------------*/
 
-@media (min-width: 577px) and (max-width: 991.98px)
+@media screen and (max-width: 991.98px)
 
 {
-    
-  header nav ul li :first-child
-  {
-    flex-basis: 50%;
-  }  
+    header nav ul li
+    {
+    display:flex;
+    justify-content:space-between;
+    }
+   
+    header nav ul li:first-child 
+    {
+        
+        flex-basis: 20%;
+    }
+   
+   
 
   .titre_principal h1
   {
@@ -732,7 +740,10 @@ align-self: flex-start;
   {
     padding:12px;
   }
-
+    .filtres .bouton
+{
+    margin-left:2rem
+}
  .text
  {
     font-size: 1.5rem;
@@ -745,7 +756,7 @@ align-self: flex-start;
     padding: 6px 10px 6px 10px;
 }
 
-#hebergement
+#hebergements
 {
 display:flex;
 flex-direction: column;
@@ -753,7 +764,7 @@ flex-direction: column;
 
 .populaire
 {
-max-width: 90%;
+max-width: 100%;
 margin:auto;
 }
 
@@ -766,6 +777,7 @@ margin:auto;
 .populaire figure
 {
     width:75%;
+    height:20rem;
 }
 .populaire figure img
 {
@@ -796,8 +808,8 @@ font-size:2rem;
 
 .hotels
 {
-max-width: 90%;
-margin:auto;
+max-width: 100%;
+margin:3rem auto 3rem auto;
 display:flex;
 flex-wrap:wrap;
 }
@@ -811,7 +823,10 @@ font-size: 1.3rem;
   {
     font-size: 1.5rem;
   }
-
+.hotels .box_side img
+{
+height:60%;
+}
   .hotels .box_side figure
   {
     height: 23rem;
@@ -835,6 +850,11 @@ padding-left: 1.5rem;
 padding-bottom:1rem;
  }
 
+#activites .visites
+{
+display :flex;
+flex-wrap:wrap;
+}
 
 
 }
