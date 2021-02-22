@@ -13,9 +13,11 @@ body
     font-family: 'Raleway', sans-serif;
     font-size: 1.6rem;
     line-height: 1.8;
-    margin:0 auto;
     max-width:100%;
+    margin:0;
 }
+
+
 
 :root 
 {
@@ -45,23 +47,36 @@ a
     color:black;
 }
 
-h3
+header, #activites
 {
-font-size: 1.7rem;
+padding:1.5rem;
 }
 
-header, main,footer
-{
-padding:2rem;
 
-}
+
 
 
 /*------------------------Header-----------------------------------------*/
 
 header nav ul li:first-child
 {
-    flex-basis: 70%;
+    flex-basis: 60%;
+    order:1;
+}
+
+header nav ul li:nth-child(2)
+{
+    order:2;
+}
+
+header nav ul li:nth-child(3)
+{
+    order:3;
+}
+
+header nav ul li:last-child
+{
+    order:4;
 }
 
 header nav img 
@@ -77,28 +92,29 @@ header nav ul
     margin-bottom: 2rem;
 }
 
-.heb  a:nth-child(1) 
-{
-    color: var(--blue);
-    border-top: 3px solid var(--blue);
-}
-
-.inscription a:nth-child(1) 
-{
-    color: var(--blue);
-}
-
-
-   
 header nav ul li a
 {
     padding: 20px 0 0;
     display: block;
 }
 
-header nav ul li a :hover
+.heb a, .inscription a
 {
-color: grey;
+    color: var(--blue);    
+}
+
+
+
+.act a:hover, .heb a:hover
+{
+color:var(--blue);
+border-top: 3px solid var(--blue);
+
+}
+
+.inscription a:hover
+{
+border-top: 3px solid var(--blue);
 }
 
 h1 
@@ -126,18 +142,26 @@ header form
 {
     background: white;
     border: var(--soft-gray) 2px solid;
-    border-radius: 20px;
-    padding: 1rem 3.3rem;
-    max-width: 34rem;
+    border-radius: 10px;
+    max-width: 38rem;
     display: flex;
     justify-content: space-between;
     margin-top: 3rem ;
     margin-bottom: 2rem;
 }
 
-form.searchbar 
+.grey_tip 
 {
-    padding-left: 1.5rem;
+    width: 5rem;
+    background: var(--soft-gray);
+    margin: 0;
+    height: 5rem;
+    border-radius: 10px 0 0 10px;
+}
+
+.fa-map-marker-alt 
+{
+padding:1.5rem;
 }
 
 .searchbar button 
@@ -145,29 +169,29 @@ form.searchbar
     color: white;
     border: 0;
     background: var(--blue);
-    border-radius: 0 12px 12px 0;
-    padding: 0 20px;
-    margin: -10px -33px -10px 0px;
+    border-radius: 0 10px 10px 0;
     font-size:medium;
+    height:5rem;
+    padding:1.5rem 2rem;
 }
 
-
+button.loupe
+{
+display:none;
+}
 
 input
 {
-    border:0;  background: transparent;
+    border:0;  
+    background: white;
 }
-label
-{
-    position: absolute;left:-999px;
-}
+
 
 ::placeholder
 {   
     color:#000;
     font-size: 1.6rem;
     font-weight: 700;
-
 }
 
 
@@ -176,7 +200,6 @@ label
     display: flex;
     align-items: center;
     margin-top:20px;
-
 }
 
 
@@ -211,6 +234,19 @@ padding-left: 1rem;
 font-weight:bolder;
 }
 
+
+ .filtres :hover
+{
+color:var(--blue) ;
+background-color: var(--soft-gray);
+transform: perspective(5);
+}
+
+.text
+{
+    margin-top:3rem
+}
+
 .text i 
 {
     margin-right: 10px;
@@ -218,29 +254,18 @@ font-weight:bolder;
     border: 1px solid var(--soft-blue);
     background: white;
     border-radius: 50%;
-    padding: 10px;
+    padding: 5px 10px;
 }
 
-.filtres :hover
-{
-color:var(--blue) ;
-background-color: var(--soft-gray);
-transform: perspective(2);
-}
 
 /*-----------MAIN--------------*/
 
-main
-{
-display:flex;
-flex-wrap: wrap;
-}
 
 #hebergements
 {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 
@@ -251,11 +276,17 @@ flex-wrap: wrap;
     
 }
 
-#hebergements .box_side :hover
+#hebergements .box_side:hover
 {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
+#hebergements figcaption
+{
+    display:flex;
+    flex-direction:column;
+       
+}
 
 /**--- .hotels ----*/
 .hotels 
@@ -289,13 +320,22 @@ flex-wrap: wrap;
  
 }
 
+.hotels .box_side p 
+{
+font-size:1.4rem;
+}
+
+.hotels .box_side h3
+{
+    font-size:1.5rem;
+}
 .hotels .box_side figure
 { 
  margin: 0;
  padding:5px;
  background:white;
  border-radius: 20px;
- box-shadow: 2px 2px 4px 2px grey;
+ box-shadow: 2px 2px 4px 4px grey;
  }
 
 .hotels .box_side img
@@ -320,10 +360,13 @@ flex-wrap: wrap;
 
 .star-empty
 {
-color:#f2f2f2;
+color:#e7dfdf;
 }
 
-
+a.cta:hover
+{
+color: var(--blue);
+}
 
 /**--- .populaire ----*/
 .populaire h2
@@ -331,27 +374,26 @@ color:#f2f2f2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:90%;
-    margin: 25px auto 35px auto;
+   padding: 2rem;
 }
+
+
 
 .populaire
 {
 display: flex;
 flex-direction: column;
-max-width:33%;
+max-width:30%;
 background:var(--soft-gray);
 border-radius: 20px;
 }
 
-.populaire .cards
-{
-display: flex;
-flex-direction: column;
-line-height: 2rem;
-justify-content: space-evenly;
-}
 
+
+.populaire .box_side
+{
+height:33%;
+}
 
 
 .populaire figure
@@ -360,22 +402,13 @@ justify-content: space-evenly;
     background:white;
     border: var(--soft-gray) 2px;
     border-radius: 20px 20px 20px 20px;
-    margin:20px auto 35px auto;
-    width: 90%;
-    height: 15rem;
-    padding: 5px;
     object-fit:cover;
     border: 2px solid var(--soft-gray);
-    box-shadow: 2px 2px 4px 3px grey; 
-    
+    box-shadow: 2px 2px 4px 4px grey; 
+   height:75%;
+  
 }
 
-
-
-.populaire figcaption
-{
-padding-left: 15px;
-}
 
 .populaire figure img
 {
@@ -385,44 +418,51 @@ object-fit:cover
  }
 
  
+.populaire figcaption
+{
+font-size:1.5rem;
+margin:auto;
+}
+
+ .double_line
+{
+line-height:1.6rem;
+}
+
+ .double_line h3
+{
+line-height:2.2rem;
+}
 
 /**--- #activites ----*/
 
 #activites
 {
 display: flex;
-flex-wrap: wrap;
-margin-top:50px;
+flex-direction: column;
+margin-top:3rem;
 }
 
 #activites h2
 {
 flex-basis:100%;
-padding-left: 35px;
-}
 
+}
 
 #activites h3
-
 {
-padding-left:10px;
-padding-bottom: 1rem;
-}
-
-#activites .image_box
-{
-  width:30rem;
-  margin-right:2.5rem;
+padding-left:1rem;
+line-height:2rem;
 }
 
 #activites figure
 {
 border: solid 1px var(--soft-gray);
 border-radius: 20px;
-box-shadow: 2px 2px 4px 3px grey;
+box-shadow: 2px 2px 4px 4px grey;
 padding-bottom:2.5rem;
-width:95%;
-
+width:90%;
+margin:0;
 }
 
 #activites .image_box
@@ -433,7 +473,7 @@ transition: .1s ease-in-out;
 
 #activites .image_box:hover
 {
-    transform: scale(1.05);
+    transform: scale(1.1);
     
 }
 
@@ -441,16 +481,19 @@ transition: .1s ease-in-out;
 {
     border-radius: 20px 20px 0px 0px;
     object-fit: cover;
-    width:100%;
-   
+    width:100%; 
 }
 
 .visites
 {
 display: flex;
 justify-content: space-evenly;
-}
 
+}
+.vertical_box
+{
+flex-basis:25%;
+}
 .vertical_box.double
 {
 display:flex;
@@ -469,8 +512,7 @@ height:90%;
 
 .fig_2
 {
-    height:30rem;
-   
+    height:30rem;   
 }
 
 .fig_2 img
@@ -513,14 +555,18 @@ height:80%;
 
 footer 
 {
-margin:auto;
-width: 95%;
+
+width: 100%;
 background: #f2f2f2;
 color: black;
 display: flex;
-flex-direction: row;
 justify-content: space-around;
 margin-top:50px;
+}
+
+footer article
+{
+flex-basis: 30%;
 }
 
 footer ul li
@@ -532,7 +578,6 @@ padding: 5px;
 footer a:hover
 {
 color:var(--blue);
-
 }
 
 /**----------------------------- Version Mobile -----------------------------------*/
@@ -544,121 +589,149 @@ color:var(--blue);
     display:flex;
     flex-direction:column;
     align-items:center;
-    max-width: 576px;
-    margin:auto
+     }
+
+    main
+    {
+    padding:0px;
     }
-    
+
     header nav ul
     {
     display:flex;
     flex-wrap: wrap;
+    flex-basis:50%;
     }
+
+    
     
     header nav ul li:first-child
-{
-     flex-basis: 60%;
-}
-
-    header nav ul li :nth-child(2)
     {
-    flex-basis:40%;
+     flex-basis: 50%;
+     order:1;
     }
 
+    header nav ul li:nth-child(2)
+    {
+    flex-basis:50%;
+    order:3;
+    }
 
-.heb  a:nth-child(1) 
-{
-    color: var(--blue);
+    
+    header nav ul li:nth-child(3)
+    {
+        order:4;
+    }
+    
+    header nav ul li:last-child
+    {
+        order:2;
+    }
+
+    .heb a:hover, .act a:hover, .inscription a:hover 
+    {
+    
     border-bottom: 3px solid var(--blue);   
-    border-top: none;
-}   
+    border-top:hidden;
+    }   
 
+    .button
+    {
+        display: none ;
+    }
 
-.filtres
-{
-display:flex;
-flex-wrap:wrap;
+    .button .loupe
+    {
+        display;
+    }
 
-}
+    .filtres
+    {
+    display:flex;
+    flex-wrap:wrap;
 
-.filtre h2
-{
+    }
+
+    .filtre h2
+    {
     flex-basis:100%;
-}
+    }
 
     main
     {
         display:flex;
         flex-wrap: nowrap;
         flex-direction: column;
-        margin: auto;
         width:100%;
 
     }
     
     #hebergements
     {
-        display:flex;
-        flex-direction: column;
+        
         justify-content: space-between;
+        width:100%;
+        
     }
     
     .hotels
     {
-    display:flex;
+    
     flex-direction: column;
-    flex-wrap: nowrap;
-    max-width:100%;
     margin-top:3rem;
+    padding:1rem;
+    background:none;
+    border-radius:0px;
     }
     
     .hotels h2
     {
-        align-self:flex-start;
+        
         font-size:2rem;
-        padding-left:0px;
+       
     }
-    .hotels .box_side figure
-    {
-        width:30rem;
-    }
+    
 
-.hotel figure img
+
+    .hotel figure img
 {
-height: 40%;
+    height: 40%;
 }
 
+    .hotel a.cta
+    {
+        font-size: 1.7rem;
+    }
 
     .populaire
     {
-    display:flex;
-    flex-direction: column;
-    max-width:100%;
-    justify-content: space-between;
+    
+    width:100%;
+    margin:0;
     }
 
     .populaire .cards
     {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     }
     
     #activites
     {
     display:flex;
     flex-direction:column;
-    align-items:center;
-    width:100%;
+    padding:1rem;
     }
-#activites h2
-{
-font-size:2rem;
-padding-left: 0px;
-align-self: flex-start;
-}
-    #activites .image_box
+
+    #activites h2
     {
-    width:33rem;
+    font-size:2rem;
+    align-self: flex-start;
+    }
+   
+    #activites figure
+    {
+        width:100%;
     }
 
     .fig_1 img, .fig_3 img,.fig_4 img
@@ -668,22 +741,12 @@ align-self: flex-start;
 
     .visites
     {
-    display:flex;
+    
     flex-direction: column;
     width:100%;
     }
 
-    .visites figure
-    {
-    height:25rem;
-    width:100%;
-    }
-    
-    .vertical_box
-    {
-    width:100%;
-
-    }
+   
 
     .image_box
     {
@@ -692,10 +755,10 @@ align-self: flex-start;
 
     footer
     {
-    width:95%;
+    width:100%;
     display:flex;
     flex-direction: column;
-    margin:auto;
+    padding:1rem;
     }
 
 
@@ -706,6 +769,13 @@ align-self: flex-start;
 @media screen and (max-width: 991.98px)
 
 {
+    body
+    {
+    width:100%;
+    }
+
+
+
     header nav ul li
     {
     display:flex;
@@ -765,7 +835,7 @@ flex-direction: column;
 .populaire
 {
 max-width: 100%;
-margin:auto;
+border-radius:0px;
 }
 
 .populaire h2
@@ -809,28 +879,29 @@ font-size:2rem;
 .hotels
 {
 max-width: 100%;
-margin:3rem auto 3rem auto;
 display:flex;
-flex-wrap:wrap;
-}
-
-.hotels h3
-{
-font-size: 1.3rem;
+padding:0px;
+border-radius:0px;
 }
 
   .hotels .box_side p
-  {
+{
     font-size: 1.5rem;
-  }
+}
+
 .hotels .box_side img
 {
 height:60%;
 }
-  .hotels .box_side figure
-  {
-    height: 23rem;
 
+.hotels .box_side figure
+{
+    height: 23rem;
+}
+
+.hotels .box_side h3 
+{
+    font-size:1.4rem;
 }
 
 .hotels figure figcaption
@@ -845,17 +916,37 @@ font-size:1.3rem;
    
  .hotels a.cta
  {
-font-size: 1.3rem;
+font-size: 1.7rem;
 padding-left: 1.5rem;
-padding-bottom:1rem;
+
  }
 
 #activites .visites
 {
 display :flex;
-flex-wrap:wrap;
+flex-wrap: wrap;
+justify-content: space-evenly;
 }
 
+#activites h3
+{
+    font-size:1.5rem;
+}
+
+#activites figure
+{
+margin:2rem auto;
+}
+
+.vertical_box
+{
+flex-basis: 45%;
+}
+
+footer .article
+{
+    flex-basis: auto;
+}
 
 }
 
