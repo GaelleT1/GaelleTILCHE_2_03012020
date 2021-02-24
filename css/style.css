@@ -379,16 +379,14 @@ a.cta:hover
 {
     display:flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content:space-between;
     height:100%;
 }
 
 .populaire .box_side
 {
-    height:150px;
     
 }
-
 
 .populaire figure
 {
@@ -767,11 +765,13 @@ footer a:hover
      .populaire .box_side
     {
         height:150px;
+        margin:auto;
     }
     
     .populaire figure
     {
-        height:100%;
+        
+        
     }
 
     .cards
