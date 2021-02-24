@@ -24,9 +24,9 @@ body
   --soft-blue: #DEEBFF;
 }
 
-img
+.hotel img, .visites img
 {
-    max-width: 100%
+    width: 100%;
 }
 
 ul
@@ -154,7 +154,7 @@ header form
 
 .fa-map-marker-alt
 {
-padding:1.5rem;
+    padding:1.5rem;
 }
 
 .searchbar button 
@@ -170,7 +170,7 @@ padding:1.5rem;
 
 .button_2
 {
-display:none;
+    display:none;
 }
 
 input
@@ -218,7 +218,7 @@ input
     background:white;
     border-radius: 20px;
     padding-right:10px;
-    margin-left:2.5rem;
+    
 }
 
 .bouton span
@@ -228,7 +228,7 @@ input
 }
 
 
-.filtres :hover
+.bouton:hover
 {
     color:var(--blue) ;
     background-color: var(--soft-gray);
@@ -308,7 +308,7 @@ input
 
 .hotels .box_side p 
 {
-font-size:1.4rem;
+    font-size:1.4rem;
 }
 
 .hotels .box_side h3
@@ -361,10 +361,9 @@ a.cta:hover
 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
+    align-items: center;  
+    padding:2rem;
 }
-
 
 
 .populaire
@@ -376,11 +375,18 @@ a.cta:hover
     border-radius: 20px;
 }
 
-.cards 
+.cards
 {
-    display: flex;
+    display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:space-evenly;
+    height:100%;
+}
+
+.populaire .box_side
+{
+    height:150px;
+    
 }
 
 
@@ -388,35 +394,32 @@ a.cta:hover
 {
     display:flex;
     background:white;
-    border: var(--soft-gray) 2px;
     border-radius: 20px 20px 20px 20px;
     object-fit:cover;
     border: 2px solid var(--soft-gray);
-    box-shadow: 2px 2px 4px 4px grey; 
+    box-shadow: 2px 2px 4px 4px grey;
+    height:100%;
 }
+
+
 
 .populaire figure img
 {
-    max-width: 30%;
+    width: 30%;
     border-radius : 20px 0px 0px 20px;
     object-fit:cover 
 }
 
- 
+
 .populaire figcaption
 {
-    font-size:1.5rem;
-    margin:auto;
+    font-size: 1.4rem;
+    padding-left:10px;
 }
-
- .double_line
+ 
+.double_line h3
 {
-    line-height:1.6rem;
-}
-
-    .double_line h3
-{
-    line-height:2.2rem;
+    line-height: 2.2rem ;
 }
 
 /**--- #activites ----*/
@@ -607,7 +610,7 @@ footer a:hover
 
     .heb a:hover, .act a:hover, .inscription a:hover 
     {
-        border-bottom: 3px solid var(--blue);   
+        border-bottom:  solid var(--blue); 
         border-top:hidden;
     }   
 
@@ -667,22 +670,13 @@ footer a:hover
         height: 40%;
     }
 
-
     .populaire
     {
-        display:flex;
-        flex-direction: column;
-        max-width:100%;
-        justify-content: space-between;
-        border-radius:0px;
+      max-width:100%;
     }
+    
 
-    .populaire .cards
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+    
 
     /*----------------Mobile-----Avtivites-----------*/
     
@@ -767,11 +761,28 @@ footer a:hover
     
     .populaire
     {
-        max-width:100%;
-        border-radius: 0px;
+       max-width:100%;
     }
+
+     .populaire .box_side
+    {
+        height:150px;
+    }
+    
+    .populaire figure
+    {
+        height:100%;
+    }
+
+    .cards
+    {
+        justify-content:space-between;
+    }
+
 /*--------------Tablette-------------Activites-----------------*/
     
+    
+
     #activites .visites
     {
         display :flex;
