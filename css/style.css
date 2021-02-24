@@ -362,7 +362,7 @@ a.cta:hover
     display: flex;
     justify-content: space-between;
     align-items: center;  
-    padding:2rem;
+   
 }
 
 
@@ -672,7 +672,14 @@ footer a:hover
     {
       max-width:100%;
     }
+
+    .populaire .box_side
+    {
+        margin:auto;
+       
+    }
     
+   
 
     
 
@@ -760,17 +767,22 @@ footer a:hover
     .populaire
     {
        max-width:100%;
+       border-radius:0px;
     }
-
+    .populaire h2
+    {
+        width:80%;
+    }
      .populaire .box_side
     {
-        height:150px;
+        height:200px;
         margin:auto;
     }
     
     .populaire figure
     {
-        
+        height:80%;
+        width:400px;
         
     }
 
