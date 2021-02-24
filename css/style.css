@@ -47,7 +47,7 @@ a
 
 header, #activites
 {
-padding:1.5rem;
+    padding:1.5rem;
 }
 
 
@@ -101,13 +101,13 @@ header nav img
 
 .act a:hover, .heb a:hover
 {
-color:var(--blue);
-border-top: 3px solid var(--blue);
+    color:var(--blue);
+    border-top: 3px solid var(--blue);
 }
 
 .inscription a:hover
 {
-border-top: 3px solid var(--blue);
+    border-top: 3px solid var(--blue);
 }
 
 h1 
@@ -192,13 +192,14 @@ input
 {
     display: flex;
     align-items: center;
-    margin-top:3rem;    
+    margin-top:3rem;   
 }
 
 .filtres h2
 {
     padding: 0;
-    flex-basis:0%;
+    flex-basis:10%;
+
 }
 
 .filtres i 
@@ -218,7 +219,8 @@ input
     background:white;
     border-radius: 20px;
     padding-right:10px;
-    
+    font-size:1.4rem;
+    margin-right:1rem;
 }
 
 .bouton span
@@ -361,7 +363,8 @@ a.cta:hover
 {
     display: flex;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center;
+    padding:0 10px;  
    
 }
 
@@ -373,19 +376,18 @@ a.cta:hover
     max-width:30%;
     background:var(--soft-gray);
     border-radius: 20px;
+    justify-content: flex-start;
 }
 
 .cards
 {
     display:flex;
     flex-direction: column;
-    justify-content:space-between;
-    height:100%;
 }
 
 .populaire .box_side
 {
-    
+   height:220px 
 }
 
 .populaire figure
@@ -396,7 +398,7 @@ a.cta:hover
     object-fit:cover;
     border: 2px solid var(--soft-gray);
     box-shadow: 2px 2px 4px 4px grey;
-    height:100%;
+    height:165px;
 }
 
 
@@ -424,36 +426,36 @@ a.cta:hover
 
 #activites
 {
-display: flex;
-flex-direction: column;
-margin-top:3rem;
+    display: flex;
+    flex-direction: column;
+    margin-top:3rem;
 }
 
 #activites h2
 {
-flex-basis:100%;
+    flex-basis:100%;
 }
 
 #activites h3
 {
-padding-left:1rem;
-line-height:2rem;
+    padding-left:1rem;
+    line-height:2rem;
 }
 
 #activites figure
 {
-border: solid 1px var(--soft-gray);
-border-radius: 20px;
-box-shadow: 2px 2px 4px 4px grey;
-padding-bottom:2.5rem;
-width:90%;
-margin:auto;
+    border: solid 1px var(--soft-gray);
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 4px grey;
+    padding-bottom:2.5rem;
+    width:90%;
+    margin:auto;
 }
 
 #activites .image_box
 {
-transform: scale(1);
-transition: .1s ease-in-out;
+    transform: scale(1);
+    transition: .1s ease-in-out;
 }
 
 #activites .image_box:hover
@@ -562,7 +564,86 @@ footer a:hover
 {
     color:var(--blue);
 }
+  
+
+/*-----------------------------------------VERSION--------------TABLETTE--------------------------*/
+
+@media screen and (max-width: 991.98px)
+{
+
+
+
+        header nav ul li:first-child
+        {
+            flex-basis:40%;
+        }
+
+    /*--------------Tablette-------------Hebergement-----------------*/
+
+    #hebergements
+    {
+        flex-direction:column;
+    }
+
+    .hotels
+    {
+        max-width: 100%;
+        background:white;
+    }
+
+    .populaire
+    {
+    max-width:100%;
+    border-radius:20px;
+    margin:auto;
+    }
+
+    .populaire h2
+    {
+    justify-content: space-around;
+    }
+
+    .populaire .box_side
+    {
+        height:200px;
+        margin:auto;
+    }
+
+    .populaire figure
+    {
+        width:400px;   
+    }
+
    
+
+    /*--------------Tablette-------------Activites-----------------*/
+
+
+
+    #activites .visites
+    {
+        display :flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    #activites h3
+    {
+        font-size:1.5rem;
+    }
+
+    #activites figure
+    {
+        margin:2rem auto;
+    }
+
+    .vertical_box
+    {
+        flex-basis: 45%;
+    }
+
+
+}
 /**----------------------------- Version Mobile -----------------------------------*/
 
 @media screen and (max-width: 576px) 
@@ -608,7 +689,7 @@ footer a:hover
 
     .heb a:hover, .act a:hover, .inscription a:hover 
     {
-        border-bottom:  solid var(--blue); 
+        border-bottom:  3px solid var(--blue); 
         border-top:hidden;
     }   
 
@@ -670,26 +751,31 @@ footer a:hover
 
     .populaire
     {
-      max-width:100%;
+      width:100%;
+      border-radius: 0px;
     }
 
+    
     .populaire .box_side
     {
+        max-width:320px;
+    }
+   
+    .populaire figure
+    {
+        width:300px;
         margin:auto;
     }
-    
-   
-
     
 
     /*----------------Mobile-----Avtivites-----------*/
     
     #activites
     {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
     }
 
     #activites h2
@@ -718,105 +804,21 @@ footer a:hover
     
     .vertical_box
     {
-    width:100%;
+        width:100%;
     }
 
     .image_box
     {
-    width:100%;
-    height:25rem;
+        width:100%;
+        height:25rem;
     }
 
     footer
     {
-    display:flex;
-    flex-direction: column;
-    padding:1.5rem;
-    max-width:100%;
+        display:flex;
+        flex-direction: column;
+        padding:1.5rem;
+        max-width:100%;
     }
-
-}
-
-/*-----------------------------------------VERSION--------------TABLETTE--------------------------*/
-
-
-@media screen and (max-width: 991.98px)
-{
-
-
-
-    header nav ul li:first-child
-    {
-        flex-basis:40%;
-    }
-
-/*--------------Tablette-------------Hebergement-----------------*/
-
-    #hebergements
-    {
-        flex-direction:column;
-    }
-
-    .hotels
-    {
-        max-width: 100%;
-        background:white;
-    }
-    
-    .populaire
-    {
-       max-width:100%;
-       border-radius:0px;
-    }
-    .populaire h2
-    {
-        width:80%;
-    }
-     .populaire .box_side
-    {
-        height:200px;
-        margin:auto;
-    }
-    
-    .populaire figure
-    {
-        height:80%;
-        width:400px;
-        
-    }
-
-    .cards
-    {
-        justify-content:space-between;
-    }
-
-/*--------------Tablette-------------Activites-----------------*/
-    
-    
-
-    #activites .visites
-    {
-        display :flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    #activites h3
-    {
-        font-size:1.5rem;
-    }
-
-    #activites figure
-    {
-        margin:2rem auto;
-    }
-
-    .vertical_box
-    {
-    flex-basis: 45%;
-    }
-
-
-
 
 }
