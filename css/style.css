@@ -24,16 +24,6 @@ body
   --soft-blue: #DEEBFF;
 }
 
-.hotel img, .visites img
-{
-    width: 100%;
-}
-
-ul
-{
-    padding: 0; list-style: none
-}
-
 button
 {
     cursor:pointer;
@@ -45,11 +35,19 @@ a
     color:black;
 }
 
+ul
+{
+    padding: 0; list-style: none
+}
+
 header, #activites
 {
     padding:1.5rem;
 }
-
+.hotel img, .visites img
+{
+    width: 100%;
+}
 
 /*-----------------Header---------------------*/
 
@@ -192,7 +190,8 @@ input
 {
     display: flex;
     align-items: center;
-    margin-top:3rem;   
+    margin-top:3rem;  
+    flex-wrap:wrap; 
 }
 
 .filtres h2
@@ -221,6 +220,9 @@ input
     padding-right:10px;
     font-size:1.4rem;
     margin-right:1rem;
+    display:flex;
+    align-items:center;
+    flex-wrap:nowrap;
 }
 
 .bouton span
@@ -564,7 +566,9 @@ footer a:hover
 {
     color:var(--blue);
 }
-  
+ 
+
+
 
 /*-----------------------------------------VERSION--------------TABLETTE--------------------------*/
 
@@ -578,7 +582,10 @@ footer a:hover
             flex-basis:40%;
         }
 
-    /*--------------Tablette-------------Hebergement-----------------*/
+      
+
+
+    /*------Tablette-----Hebergement-----*/
 
     #hebergements
     {
@@ -616,7 +623,7 @@ footer a:hover
 
    
 
-    /*--------------Tablette-------------Activites-----------------*/
+    /*----Tablette------Activites--------*/
 
 
 
@@ -644,9 +651,11 @@ footer a:hover
 
 
 }
+
+
 /**----------------------------- Version Mobile -----------------------------------*/
 
-@media screen and (max-width: 576px) 
+@media screen and (max-width: 575.98px) 
 {
 
 /*-------------Mobile--------header-----*/
